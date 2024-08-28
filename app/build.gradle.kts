@@ -17,6 +17,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.10"
 }
 
 android {
@@ -79,4 +80,23 @@ dependencies {
     
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     debugImplementation("androidx.compose.ui:ui-tooling")
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+//    Retrofit with Scalar Converter
+//    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    // Retrofit with Kotlin serialization Converter
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+
+    // Kotlin serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
+    // Retrofit and Gson Converter
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.skydoves:landscapist-glide:2.2.7")
 }
+
+
+
